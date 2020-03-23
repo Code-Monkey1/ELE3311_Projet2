@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1584069169">
-  <File Type="BITSTR-BMM" Name="simon_affichage_del_bd.bmm"/>
   <File Type="PA-TCL" Name="simon_affichage_del.tcl"/>
-  <File Type="OPT-DCP" Name="simon_affichage_del_opt.dcp"/>
+  <File Type="BITSTR-BMM" Name="simon_affichage_del_bd.bmm"/>
   <File Type="REPORTS-TCL" Name="simon_affichage_del_reports.tcl"/>
+  <File Type="OPT-DCP" Name="simon_affichage_del_opt.dcp"/>
   <File Type="OPT-HWDEF" Name="simon_affichage_del.hwdef"/>
-  <File Type="BG-BGN" Name="simon_affichage_del.bgn"/>
   <File Type="PWROPT-DCP" Name="simon_affichage_del_pwropt.dcp"/>
+  <File Type="BG-BGN" Name="simon_affichage_del.bgn"/>
   <File Type="PLACE-DCP" Name="simon_affichage_del_placed.dcp"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="simon_affichage_del_incremental_reuse_pre_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="simon_affichage_del_postplace_pwropt.dcp"/>
