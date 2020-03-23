@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/RAPH/Documents/Polytechnique/Systemes Logiques Programmables/Labos/Projet2/projet2_version_23_mars/projet2_raph_oumou/projet2_raph_oumou.srcs/sources_1/imports/Sources/cnt.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cnt'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/RAPH/Documents/Polytechnique/Systemes Logiques Programmables/Labos/Projet2/projet2_version_23_mars/Sources/msa_simon.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'msa_simon'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/RAPH/Documents/Polytechnique/Systemes Logiques Programmables/Labos/Projet2/projet2_version_23_mars/projet2_raph_oumou/projet2_raph_oumou.srcs/sim_1/imports/Sources/msa_simon_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'msa_simon_tb'

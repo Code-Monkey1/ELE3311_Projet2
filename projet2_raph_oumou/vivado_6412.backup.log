@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Mar  9 20:31:09 2020
+# Process ID: 6412
+# Current directory: D:/projet2_raph_oumou
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5776 D:\projet2_raph_oumou\projet2_raph_oumou.xpr
+# Log file: D:/projet2_raph_oumou/vivado.log
+# Journal file: D:/projet2_raph_oumou\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/projet2_raph_oumou/projet2_raph_oumou.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'U:/projet2_raph_oumou/rtl/prbs7.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'U:/projet2_raph_oumou/rtl/dbnc.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'U:/projet2_raph_oumou/rtl/delay_cnt.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'U:/projet2_raph_oumou/rtl/heartbeat.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'U:/projet2_raph_oumou/rtl/lumi.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'U:/projet2_raph_oumou/rtl/meta_harden.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'U:/projet2_raph_oumou/rtl/msa_simon.vhd'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'U:/didac/constraints/didac.xdc'.
+CRITICAL WARNING: [Project 1-19] Could not find the file 'U:/projet2_raph_oumou/sim/simon_affichage_del_tb.vhd'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 686.441 ; gain = 70.934
+update_compile_order -fileset sources_1
+eexit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  9 20:34:06 2020...
