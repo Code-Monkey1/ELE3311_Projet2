@@ -126,7 +126,26 @@ begin
 	end if;
 end process;
 
-msa_game_process : process(clk_i, rst_i, start_game_i, key_pressed_i, key_correct_i, display_ready_i)
+msa_game_process : process(
+                            clk_i,
+                            rst_i, 
+                            start_game_i, 
+                            key_pressed_i, 
+                            key_correct_i, 
+                            display_ready_i, 
+                            etat_present,
+                            item_cnt_i,
+                            seq_length_i,
+                            seq_length_1_p,
+                            seq_length_inc_p,
+                            item_cnt_rst_p,
+                            item_cnt_inc_p,
+                            ms_player_p,
+                            ms_gameover_p,
+                            ms_digit_valid_p,
+                            next_prbs_p,
+                            load_prbs_p,
+                            etat_present)
 begin
     case etat_present is
         when init =>

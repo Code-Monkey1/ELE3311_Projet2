@@ -44,7 +44,12 @@ begin
 	end if;
 end process;
 
-pseudo_random_msa_process : process(etat_present, load_prbs_i, next_prbs_i, seed_i)
+pseudo_random_msa_process : process(
+                                     etat_present,
+                                     load_prbs_i,
+                                     next_prbs_i, 
+                                     seed_i,
+                                     seed)
 begin
 	case etat_present is
 		when etat_read_seed =>
