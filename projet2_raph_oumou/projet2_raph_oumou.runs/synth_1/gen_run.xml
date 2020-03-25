@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1584069168">
-  <File Type="PA-TCL" Name="simon_affichage_del.tcl"/>
-  <File Type="REPORTS-TCL" Name="simon_affichage_del_reports.tcl"/>
-  <File Type="RDS-RDS" Name="simon_affichage_del.vds"/>
-  <File Type="RDS-DCP" Name="simon_affichage_del.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1585009809">
+  <File Type="PA-TCL" Name="msa_simon.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="msa_simon_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="msa_simon_reports.tcl"/>
+  <File Type="RDS-RDS" Name="msa_simon.vds"/>
+  <File Type="RDS-UTIL" Name="msa_simon_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="msa_simon_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="msa_simon.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="msa_simon_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="msa_simon_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../Sources/msa_simon.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Sources/lumi.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/Sources/cnt.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../Sources/cnt.vhd"/>
         <Attr Name="ImportTime" Val="1581957686"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -16,48 +35,42 @@
     </File>
     <File Path="$PPRDIR/../Sources/dbnc.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="U:/projet2_raph_oumou/rtl/lumi.vhd">
+    <File Path="$PPRDIR/../Sources/meta_harden.vhd">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="U:/projet2_raph_oumou/rtl/meta_harden.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../Sources/msa_simon.vhd">
-      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../Sources/prbs7.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../Sources/delay_cnt.vhd">
       <FileInfo SFType="VHDL2008">
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../Sources/heartbeat.vhd">
       <FileInfo SFType="VHDL2008">
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/imports/rtl/simon_affichage_del.vhd">
       <FileInfo SFType="VHDL2008">
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../Sources/simon_affichage_del.vhd"/>
         <Attr Name="ImportTime" Val="1584029447"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -66,12 +79,12 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="simon_affichage_del"/>
+      <Option Name="TopModule" Val="msa_simon"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="U:/didac/constraints/didac.xdc">
+    <File Path="$PPRDIR/../Sources/timing.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

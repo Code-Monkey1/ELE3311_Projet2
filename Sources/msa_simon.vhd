@@ -97,7 +97,18 @@ signal etat_present, etat_suivant : T_etat;
 
 begin
 
+-- Association des signaux internes aux sorties:
+seq_length_1_o       <= seq_length_1_p;
+seq_length_inc_o     <= seq_length_inc_p;
+item_cnt_rst_o       <= item_cnt_rst_p;
+item_cnt_inc_o       <= item_cnt_inc_p;
+ms_player_o          <= ms_player_p;
+ms_gameover_o        <= ms_gameover_p;
+ms_digit_valid_o     <= ms_digit_valid_p;
+next_prbs_o          <= next_prbs_p;
+load_prbs_o          <= load_prbs_p;
 
+-- Processus qui gère le reset et les changements d'états présent par coup d'horloge
 reg_process : process(clk_i, rst_i)
 begin
     if rst_i = '1' then
@@ -126,6 +137,7 @@ begin
 	end if;
 end process;
 
+-- La MSA qui gère le coeur du jeu
 msa_game_process : process(
                             clk_i,
                             rst_i, 

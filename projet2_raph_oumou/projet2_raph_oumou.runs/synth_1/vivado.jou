@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2019.1 (64-bit)
-# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
-# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Mar 12 23:12:52 2020
-# Process ID: 4520
-# Current directory: F:/ELE3311_LAB/projet2/projet2_raph_oumou/projet2_raph_oumou.runs/synth_1
-# Command line: vivado.exe -log simon_affichage_del.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source simon_affichage_del.tcl
-# Log file: F:/ELE3311_LAB/projet2/projet2_raph_oumou/projet2_raph_oumou.runs/synth_1/simon_affichage_del.vds
-# Journal file: F:/ELE3311_LAB/projet2/projet2_raph_oumou/projet2_raph_oumou.runs/synth_1\vivado.jou
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Mar 23 20:30:18 2020
+# Process ID: 10200
+# Current directory: C:/Users/RAPH/Documents/Polytechnique/Systemes Logiques Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.runs/synth_1
+# Command line: vivado.exe -log msa_simon.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source msa_simon.tcl
+# Log file: C:/Users/RAPH/Documents/Polytechnique/Systemes Logiques Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.runs/synth_1/msa_simon.vds
+# Journal file: C:/Users/RAPH/Documents/Polytechnique/Systemes Logiques Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source simon_affichage_del.tcl -notrace
+source msa_simon.tcl -notrace

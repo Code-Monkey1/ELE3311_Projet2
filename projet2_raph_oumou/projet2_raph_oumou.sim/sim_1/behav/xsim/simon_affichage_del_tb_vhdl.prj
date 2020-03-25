@@ -2,14 +2,14 @@
 vhdl xil_defaultlib  \
 "../../../../projet2_raph_oumou.srcs/sources_1/imports/Sources/cnt.vhd" \
 "../../../../../Sources/dbnc.vhd" \
-"U:/projet2_raph_oumou/rtl/lumi.vhd" \
-"U:/projet2_raph_oumou/rtl/meta_harden.vhd" \
+"../../../../../Sources/meta_harden.vhd" \
 "../../../../../Sources/msa_simon.vhd" \
 "../../../../../Sources/prbs7.vhd" \
 
 vhdl2008 xil_defaultlib  \
 "../../../../../Sources/delay_cnt.vhd" \
 "../../../../../Sources/heartbeat.vhd" \
+"../../../../../Sources/lumi.vhd" \
 "../../../../projet2_raph_oumou.srcs/sources_1/imports/rtl/simon_affichage_del.vhd" \
 
 vhdl xil_defaultlib  \
