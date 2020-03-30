@@ -96,7 +96,7 @@ begin
 
     
 
-    wait for 50 * clk_period;
+    wait for 2000000000 * clk_period;
     -- Arrêter l'horloge pour terminer la simulation automatiquement
     enable_clk_src <= false;
     wait;

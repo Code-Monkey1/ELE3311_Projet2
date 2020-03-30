@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="simon_affichage_del_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="simon_affichage_del_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="970010fs"></ZoomStartTime>
+      <ZoomEndTime time="979391fs"></ZoomEndTime>
+      <Cursor1Time time="117550fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="191"></NameColumnWidth>
+      <ValueColumnWidth column_width="168"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="26" />
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/rst_i" type="logic">
+      <obj_property name="ElementShortName">rst_i</obj_property>
+      <obj_property name="ObjectShortName">rst_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/clk_i" type="logic">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/player_i" type="logic">
+      <obj_property name="ElementShortName">player_i</obj_property>
+      <obj_property name="ObjectShortName">player_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/gameover_i" type="logic">
+      <obj_property name="ElementShortName">gameover_i</obj_property>
+      <obj_property name="ObjectShortName">gameover_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/digit_valid_i" type="logic">
+      <obj_property name="ElementShortName">digit_valid_i</obj_property>
+      <obj_property name="ObjectShortName">digit_valid_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/digit_i" type="array">
+      <obj_property name="ElementShortName">digit_i[1:0]</obj_property>
+      <obj_property name="ObjectShortName">digit_i[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/start_delay_o" type="logic">
+      <obj_property name="ElementShortName">start_delay_o</obj_property>
+      <obj_property name="ObjectShortName">start_delay_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/end_delay_i" type="logic">
+      <obj_property name="ElementShortName">end_delay_i</obj_property>
+      <obj_property name="ObjectShortName">end_delay_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/display_ready_o" type="logic">
+      <obj_property name="ElementShortName">display_ready_o</obj_property>
+      <obj_property name="ObjectShortName">display_ready_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/md_player_o" type="logic">
+      <obj_property name="ElementShortName">md_player_o</obj_property>
+      <obj_property name="ObjectShortName">md_player_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/md_gameover_o" type="logic">
+      <obj_property name="ElementShortName">md_gameover_o</obj_property>
+      <obj_property name="ObjectShortName">md_gameover_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/md_seq_o" type="array">
+      <obj_property name="ElementShortName">md_seq_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">md_seq_o[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/start_delay_p" type="logic">
+      <obj_property name="ElementShortName">start_delay_p</obj_property>
+      <obj_property name="ObjectShortName">start_delay_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/display_ready_p" type="logic">
+      <obj_property name="ElementShortName">display_ready_p</obj_property>
+      <obj_property name="ObjectShortName">display_ready_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/md_player_p" type="logic">
+      <obj_property name="ElementShortName">md_player_p</obj_property>
+      <obj_property name="ObjectShortName">md_player_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/md_gameover_p" type="logic">
+      <obj_property name="ElementShortName">md_gameover_p</obj_property>
+      <obj_property name="ObjectShortName">md_gameover_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/md_seq_p" type="array">
+      <obj_property name="ElementShortName">md_seq_p[3:0]</obj_property>
+      <obj_property name="ObjectShortName">md_seq_p[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/start_delay_f" type="logic">
+      <obj_property name="ElementShortName">start_delay_f</obj_property>
+      <obj_property name="ObjectShortName">start_delay_f</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/display_ready_f" type="logic">
+      <obj_property name="ElementShortName">display_ready_f</obj_property>
+      <obj_property name="ObjectShortName">display_ready_f</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/md_player_f" type="logic">
+      <obj_property name="ElementShortName">md_player_f</obj_property>
+      <obj_property name="ObjectShortName">md_player_f</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/md_gameover_f" type="logic">
+      <obj_property name="ElementShortName">md_gameover_f</obj_property>
+      <obj_property name="ObjectShortName">md_gameover_f</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/md_seq_f" type="array">
+      <obj_property name="ElementShortName">md_seq_f[3:0]</obj_property>
+      <obj_property name="ObjectShortName">md_seq_f[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/etat_p" type="other">
+      <obj_property name="ElementShortName">etat_p</obj_property>
+      <obj_property name="ObjectShortName">etat_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_display_inst/etat_f" type="other">
+      <obj_property name="ElementShortName">etat_f</obj_property>
+      <obj_property name="ObjectShortName">etat_f</obj_property>
+   </wvobject>
+</wave_config>

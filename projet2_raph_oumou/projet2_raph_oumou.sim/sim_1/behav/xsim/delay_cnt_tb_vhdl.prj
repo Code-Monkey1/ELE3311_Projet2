@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl2008 xil_defaultlib  \
+"../../../../../Sources/delay_cnt.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../../Sources/delay_cnt_tb.vhd" \
+
+# Do not sort compile order
+nosort

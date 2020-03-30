@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/RAPH/Documents/Polytechnique/Systemes Logiques Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.runs/synth_1'
+HD_PWD='C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log msa_simon.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source msa_simon.tcl
+EAStep vivado -log simon_affichage_del.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source simon_affichage_del.tcl
