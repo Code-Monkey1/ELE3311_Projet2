@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log msa_simon.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source msa_simon.tcl
+EAStep vivado -log simon_affichage_del.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source simon_affichage_del.tcl

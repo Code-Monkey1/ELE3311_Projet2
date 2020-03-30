@@ -40,8 +40,8 @@ end delay_cnt;
 
 architecture behavioral of delay_cnt is
 type T_etat is (etat_init, etat_counting, etat_final);
-signal etat_present, etat_suivant : T_etat;
-signal counter : unsigned(24 downto 0); -- This will count up to 30M
+signal etat_present, etat_suivant : T_etat := etat_init;
+signal counter : unsigned(24 downto 0) := "0000000000000000000000000"; -- This will count up to 30M
 begin
   
 reg_process : process(rst_i, clk_i)
@@ -78,6 +78,7 @@ begin
 		when others => --etat_final
             end_delay_o <= '1';
 			etat_suivant <= etat_init;
+			counter <= "0000000000000000000000000"; -- reset the counter
 	end case;
 
 end process;

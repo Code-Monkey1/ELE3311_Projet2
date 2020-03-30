@@ -1,1 +1,3 @@
 Breakpoint File Version 1.0
+79 true C:/Users/RAPH/Documents/Polytechnique/Systemes Logiques Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/delay_cnt.vhd
+49 true C:/Users/RAPH/Documents/Polytechnique/Systemes Logiques Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/delay_cnt.vhd
