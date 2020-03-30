@@ -1,14 +1,29 @@
 #-----------------------------------------------------------
-# Vivado v2019.1 (64-bit)
-# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
-# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Mar 30 15:08:12 2020
-# Process ID: 18604
-# Current directory: C:/Users/HP EliteBook Pro/Documents/GitHub/ELE3311_Projet2/projet2_raph_oumou
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18180 C:\Users\HP EliteBook Pro\Documents\GitHub\ELE3311_Projet2\projet2_raph_oumou\projet2_raph_oumou.xpr
-# Log file: C:/Users/HP EliteBook Pro/Documents/GitHub/ELE3311_Projet2/projet2_raph_oumou/vivado.log
-# Journal file: C:/Users/HP EliteBook Pro/Documents/GitHub/ELE3311_Projet2/projet2_raph_oumou\vivado.jou
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Mar 30 16:01:56 2020
+# Process ID: 9292
+# Current directory: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9888 C:\Users\RAPH\Documents\Polytechnique\Systemes_Logiques_Programmables\Labos\Projet2GitHub\ELE3311_Projet2\projet2_raph_oumou\projet2_raph_oumou.xpr
+# Log file: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/vivado.log
+# Journal file: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {C:/Users/HP EliteBook Pro/Documents/GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.xpr}
+open_project C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.xpr
 update_compile_order -fileset sources_1
+launch_simulation
+source simon_affichage_del_tb.tcl
+add_wave {{/simon_affichage_del_tb/uut}} 
+relaunch_sim
+add_wave {{/simon_affichage_del_tb/uut/msa_simon_inst}} 
+relaunch_sim
+save_wave_config {C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg
+set_property xsim.view C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg [get_filesets sim_1]
+close_sim
+add_files -norecurse C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/msa_display.vhd
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg
+source simon_affichage_del_tb.tcl

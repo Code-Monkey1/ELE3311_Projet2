@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="simon_affichage_del_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="simon_affichage_del_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="47640fs"></ZoomStartTime>
+      <ZoomEndTime time="95941fs"></ZoomEndTime>
+      <Cursor1Time time="104940fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="179"></NameColumnWidth>
+      <ValueColumnWidth column_width="166"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="28" />
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/rst_i" type="logic">
+      <obj_property name="ElementShortName">rst_i</obj_property>
+      <obj_property name="ObjectShortName">rst_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/clk_i" type="logic">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/start_game_i" type="logic">
+      <obj_property name="ElementShortName">start_game_i</obj_property>
+      <obj_property name="ObjectShortName">start_game_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/key_pressed_i" type="logic">
+      <obj_property name="ElementShortName">key_pressed_i</obj_property>
+      <obj_property name="ObjectShortName">key_pressed_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/key_correct_i" type="logic">
+      <obj_property name="ElementShortName">key_correct_i</obj_property>
+      <obj_property name="ObjectShortName">key_correct_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/display_ready_i" type="logic">
+      <obj_property name="ElementShortName">display_ready_i</obj_property>
+      <obj_property name="ObjectShortName">display_ready_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/item_cnt_i" type="array">
+      <obj_property name="ElementShortName">item_cnt_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">item_cnt_i[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/seq_length_i" type="array">
+      <obj_property name="ElementShortName">seq_length_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">seq_length_i[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/seq_length_1_o" type="logic">
+      <obj_property name="ElementShortName">seq_length_1_o</obj_property>
+      <obj_property name="ObjectShortName">seq_length_1_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/seq_length_inc_o" type="logic">
+      <obj_property name="ElementShortName">seq_length_inc_o</obj_property>
+      <obj_property name="ObjectShortName">seq_length_inc_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/item_cnt_rst_o" type="logic">
+      <obj_property name="ElementShortName">item_cnt_rst_o</obj_property>
+      <obj_property name="ObjectShortName">item_cnt_rst_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/item_cnt_inc_o" type="logic">
+      <obj_property name="ElementShortName">item_cnt_inc_o</obj_property>
+      <obj_property name="ObjectShortName">item_cnt_inc_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/ms_player_o" type="logic">
+      <obj_property name="ElementShortName">ms_player_o</obj_property>
+      <obj_property name="ObjectShortName">ms_player_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/ms_gameover_o" type="logic">
+      <obj_property name="ElementShortName">ms_gameover_o</obj_property>
+      <obj_property name="ObjectShortName">ms_gameover_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/ms_digit_valid_o" type="logic">
+      <obj_property name="ElementShortName">ms_digit_valid_o</obj_property>
+      <obj_property name="ObjectShortName">ms_digit_valid_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/next_prbs_o" type="logic">
+      <obj_property name="ElementShortName">next_prbs_o</obj_property>
+      <obj_property name="ObjectShortName">next_prbs_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/load_prbs_o" type="logic">
+      <obj_property name="ElementShortName">load_prbs_o</obj_property>
+      <obj_property name="ObjectShortName">load_prbs_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/etat_present" type="other">
+      <obj_property name="ElementShortName">etat_present</obj_property>
+      <obj_property name="ObjectShortName">etat_present</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/etat_suivant" type="other">
+      <obj_property name="ElementShortName">etat_suivant</obj_property>
+      <obj_property name="ObjectShortName">etat_suivant</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/seq_length_1_p" type="logic">
+      <obj_property name="ElementShortName">seq_length_1_p</obj_property>
+      <obj_property name="ObjectShortName">seq_length_1_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/seq_length_inc_p" type="logic">
+      <obj_property name="ElementShortName">seq_length_inc_p</obj_property>
+      <obj_property name="ObjectShortName">seq_length_inc_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/item_cnt_rst_p" type="logic">
+      <obj_property name="ElementShortName">item_cnt_rst_p</obj_property>
+      <obj_property name="ObjectShortName">item_cnt_rst_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/item_cnt_inc_p" type="logic">
+      <obj_property name="ElementShortName">item_cnt_inc_p</obj_property>
+      <obj_property name="ObjectShortName">item_cnt_inc_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/ms_player_p" type="logic">
+      <obj_property name="ElementShortName">ms_player_p</obj_property>
+      <obj_property name="ObjectShortName">ms_player_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/ms_gameover_p" type="logic">
+      <obj_property name="ElementShortName">ms_gameover_p</obj_property>
+      <obj_property name="ObjectShortName">ms_gameover_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/ms_digit_valid_p" type="logic">
+      <obj_property name="ElementShortName">ms_digit_valid_p</obj_property>
+      <obj_property name="ObjectShortName">ms_digit_valid_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/next_prbs_p" type="logic">
+      <obj_property name="ElementShortName">next_prbs_p</obj_property>
+      <obj_property name="ObjectShortName">next_prbs_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/simon_affichage_del_tb/uut/msa_simon_inst/load_prbs_p" type="logic">
+      <obj_property name="ElementShortName">load_prbs_p</obj_property>
+      <obj_property name="ObjectShortName">load_prbs_p</obj_property>
+   </wvobject>
+</wave_config>

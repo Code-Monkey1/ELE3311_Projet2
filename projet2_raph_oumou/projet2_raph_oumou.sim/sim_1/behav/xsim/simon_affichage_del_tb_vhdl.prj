@@ -3,6 +3,7 @@ vhdl xil_defaultlib  \
 "../../../../projet2_raph_oumou.srcs/sources_1/imports/Sources/cnt.vhd" \
 "../../../../../Sources/dbnc.vhd" \
 "../../../../../Sources/meta_harden.vhd" \
+"../../../../../Sources/msa_display.vhd" \
 "../../../../../Sources/msa_simon.vhd" \
 "../../../../../Sources/prbs7.vhd" \
 
