@@ -291,6 +291,24 @@ begin
 
 
   ----------------------------------------------------------------------------
+
+Sample_8khz_inst : delay_cnt
+ generic map (
+  SHORT_SIM             => SHORT_SIM, 
+  COUNT_VAL             => to_unsigned(1250000, 25),
+  COUNT_VAL_SHORT       => to_unsigned(2, 25)
+)
+port map (
+rst_i                  =>rst,
+clk_i                  =>clk,
+start_delay_i          =>start_delay,
+end_delay_o            =>end_delay
+);
+
+  
+  ------------------------------------------------------------------------------
+  
+  ----------------------------------------------------------------------------
   heartbeat_inst : heartbeat
   port map(
     clk_i                   => clk,
