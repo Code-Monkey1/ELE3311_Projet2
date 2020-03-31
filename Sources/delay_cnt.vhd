@@ -39,27 +39,27 @@ end delay_cnt;
 
 
 architecture behavioral of delay_cnt is
+    signal is_counting: std_logic := '0';
     signal cnt: integer := 0;
-    Signal flag: STD_LOGIC := '0';
 begin 
-  process (clk_i, rst_i )
+  process (clk_i, rst_i, start_delay_i)
   begin 
     if (rst_i = '1')then
         end_delay_o <='0';
     else
         if start_delay_i = '1' then
-            flag <= '1';
+            is_counting <= '1';
         end if;    
         if  rising_edge(clk_i) then
-            if flag = '1' then
+            if is_counting = '1' then
                 if (cnt = COUNT_VAL) then
                     end_delay_o <='1';
                     cnt <=0;
-                    flag <= '0'; 
+                    is_counting <= '0'; 
                  else
                      cnt <= cnt +1;
                      end_delay_o <='0';
-                     flag <= '1';
+                     is_counting <= '1';
                  end if;
              else
                   end_delay_o <='0';   

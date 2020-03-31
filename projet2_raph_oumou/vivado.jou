@@ -140,3 +140,43 @@ current_wave_config {simon_affichage_del_tb_behav2.wcfg}
 add_wave {{/simon_affichage_del_tb/uut/msa_display_inst}} 
 relaunch_sim
 run 4 s
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation -mode post-synthesis -type functional
+launch_simulation -mode post-synthesis -type functional
+launch_simulation -mode post-synthesis -type functional
+launch_simulation -mode post-synthesis -type functional
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav1.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav2.wcfg
+source simon_affichage_del_tb.tcl
+current_wave_config {simon_affichage_del_tb_behav.wcfg}
+add_wave {{/simon_affichage_del_tb/uut/msa_simon_inst}} 
+current_wave_config {simon_affichage_del_tb_behav1.wcfg}
+add_wave {{/simon_affichage_del_tb/uut/msa_display_inst}} 
+relaunch_sim
+run 4 s
+close_sim
+launch_simulation
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav1.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav2.wcfg
+source simon_affichage_del_tb.tcl
+run 4 s
+close_sim
+close_design
+launch_simulation
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav1.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav2.wcfg
+source simon_affichage_del_tb.tcl
+run 4 s
+run 4 s
+run 4 s
+step
+step
+relaunch_sim
+step
+close_sim

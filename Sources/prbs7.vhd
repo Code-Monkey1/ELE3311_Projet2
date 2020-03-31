@@ -33,8 +33,8 @@ end prbs7;
 
 architecture behavioral of prbs7 is
 type T_etat is (etat_read_seed, etat_attente, etat_generate_new_output);
-signal etat_present, etat_suivant : T_etat;
-signal seed : std_logic_vector(6 downto 0); --A saved copy of the seed used to generate random bits
+signal etat_present, etat_suivant : T_etat := etat_attente;
+signal seed : std_logic_vector(6 downto 0) := "0000000"; --A saved copy of the seed used to generate random bits
 begin
   
 reg_process : process(clk_i)

@@ -211,7 +211,7 @@ begin
 
   ----------------------------------------------------------------------------
   -- Horloge et remise a zero
-  clk <= clk_100mhz_i;
+  --clk <= clk_100mhz_i; --keep??
   
   -- Instantiation d'un BUFG pour la distribution de l'horloge
     BUFG_inst : BUFG -- :-)
@@ -225,28 +225,28 @@ begin
    
  -- Generation du signal d'echantillonnage pour le dbnc
 
-    --Create the clock enable:
-    clock_enable_process : process(clk)
-    begin
-      if(rising_edge(clk)) then
-        clk_enable_counter <= clk_enable_counter + 1;
+--Create the clock enable:
+--    clock_enable_process : process(clk)
+--    begin
+--      if(rising_edge(clk)) then
+--        clk_enable_counter <= clk_enable_counter + 1;
         
-        if(clk_enable_counter = 12500) then
-          clk_enable_8khz <= '1';
-        else
-          clk_enable_8khz <= '0';
-        end if;
-      end if;
-    end process;
+--        if(clk_enable_counter = 12500) then
+--          clk_enable_8khz <= '1';
+--        else
+--          clk_enable_8khz <= '0';
+--        end if;
+--      end if;
+--    end process;
     
-    slow_clk_process : process(clk)
-    begin
-    if(rising_edge(clk)) then
-        if(clk_enable_8khz = '1') then
-          sample_8khz <= '1', '0' after clk_period;
-        end if;
-  end if;
-end process;
+--    slow_clk_process : process(clk)
+--    begin
+--    if(rising_edge(clk)) then
+--        if(clk_enable_8khz = '1') then
+--          sample_8khz <= '1', '0' after clk_period;
+--        end if;
+--  end if;
+--end process;
 
   ----------------------------------------------------------------------------
   resynchronisation_inst : meta_harden
@@ -380,6 +380,22 @@ end process;
     seq_i       => md_seq,
     lumi_seq_o  => lumi_seq
   );
+
+ ------------------------------------------------------------------------------
+ 
+-- Sample_8khz_inst : delay_cnt
+-- generic map (
+--  SHORT_SIM             => SHORT_SIM, 
+--  COUNT_VAL             => to_unsigned(1250000, 25),
+--  COUNT_VAL_SHORT       => to_unsigned(2, 25)
+--)
+--port map (
+--rst_i                  =>rst,
+--clk_i                  =>clk,
+--start_delay_i          =>start_delay,
+--end_delay_o            =>end_delay
+--);
+
 
 
   ----------------------------------------------------------------------------

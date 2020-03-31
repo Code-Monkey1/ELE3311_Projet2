@@ -24,7 +24,7 @@ architecture bench of simon_affichage_del_tb is
 
   component simon_affichage_del
   generic (
-    SHORT_SIM             : boolean := false
+   SHORT_SIM             : boolean := false
   );
   port (
     rst_n_i               : in    std_logic;
@@ -54,7 +54,7 @@ begin
   uut: simon_affichage_del
   generic  map (
     SHORT_SIM               => true
-  )
+ )
     port map (
     clk_100mhz_i            => clk_100mhz,
     rst_n_i                 => rst_n,
@@ -84,19 +84,48 @@ begin
   stimulus: process
   begin
     
-    seed      <= "1001010"; -- À modifier
+    seed      <= "0000010";
     wait for 5 * clk_period;
     start_game <= '1';
     wait for 5 * clk_period;
     start_game <= '0';
+
+    -- state = wait 2
+    wait for 60000000*clk_period; -- Le temps nécessaire pour 2 délais de 300ms (le temps que display_ready devienne 1)
+    
+    -- state = waitKey
+    -- Joue une touche
+    wait for 15 * clk_period;
+    btn <= "0100";
+    wait for 10 * clk_period;
+    btn <= "0000"; 
+    
+    -- state = badKey
+    wait for 60000000*clk_period; -- Le temps nécessaire pour 2 délais de 300ms (le temps que display_ready devienne 1)
+    
+    wait for 5*clk_period;
+    start_game <= '1';
+    wait for 5 * clk_period;
+    start_game <= '0';
+    wait for 10*clk_period;
+
+    wait for 60000000*clk_period; -- Le temps nécessaire pour 2 délais de 300ms (le temps que display_ready devienne 1)
+    
+    -- Joue une touche
     wait for 15 * clk_period;
     btn <= "0001";
-    wait for 5 * clk_period;
+    wait for 10 * clk_period;
+    btn <= "0000"; -- state = goodKey (?)
+
+    wait for 60000000*clk_period; -- Le temps nécessaire pour 2 délais de 300ms (le temps que display_ready devienne 1)
+
+    -- Joue une touche
+    wait for 15 * clk_period;
+    btn <= "1000";
+    wait for 10 * clk_period;
     btn <= "0000";
 
-    
-
-    wait for 2000000000 * clk_period;
+    wait for 1000000000 * clk_period;
     -- Arrêter l'horloge pour terminer la simulation automatiquement
     enable_clk_src <= false;
     wait;

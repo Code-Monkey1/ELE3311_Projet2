@@ -1,0 +1,1 @@
+-wto "6566a69c6277490a9acb63108059c35f" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "simon_affichage_del_tb_func_synth" "xil_defaultlib.simon_affichage_del_tb" -log "elaborate.log" 

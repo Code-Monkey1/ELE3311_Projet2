@@ -189,75 +189,81 @@ port map
   start_game <= '1';
   display_ready <='0';
 
-    wait for 4 * clk_period; 
+  wait for 4 * clk_period; 
   
   start_game <= '1';
   display_ready <='1';
-    wait for  2 * clk_period;
+  wait for  2 * clk_period;
   display_ready <='0';
   start_game<='0';
-    wait for  5 * clk_period;
+  wait for  5 * clk_period;
   display_ready <='1';
   key_pressed <='0';
   key_correct <='0';
-    wait for 5 * clk_period;
+  wait for 5 * clk_period;
   key_pressed <='1';
   key_correct <='0';  
 
   display_ready <='0';
 
-    wait for 7 * clk_period;
+  wait for 7 * clk_period;
 
   display_ready <='1';
   key_pressed <='0';
   key_correct <='0';
-    wait for 1 * clk_period;
+  wait for 1 * clk_period;
 
   display_ready <='0';
 
-  -- On the second run, succeed 
-    wait for 4 * clk_period;
+  -- On the second run, succeed twice
+  wait for 4 * clk_period;
   start_game <= '1';
-    wait for 3 * clk_period;
+  wait for 3 * clk_period;
   start_game <= '0';
   display_ready <='1';
-    wait for 2 * clk_period;
+  wait for 2 * clk_period;
   display_ready <='0';  
-    wait for 5 * clk_period;
+  wait for 5 * clk_period;
   display_ready <='0';
-    wait for 4 * clk_period; 
+  wait for 4 * clk_period; 
   display_ready <='1';
-    wait for 3 * clk_period; 
+  wait for 3 * clk_period; 
   display_ready <= '0';
   key_pressed <= '1';
   key_correct <= '1';
 
-    wait for 4 * clk_period; -- Here we are at good key state
+  wait for 4 * clk_period; -- Here we are at good key state
   key_pressed <='0';
   key_correct <= '0';
   display_ready <= '1';
-    wait for 1 * clk_period; 
+  wait for 1 * clk_period; 
   display_ready <= '0';
 
-    wait for 9 * clk_period; 
+  wait for 9 * clk_period; 
   display_ready <= '1'; -- Here we are at wait1 state
-    wait for 2 * clk_period; 
+  wait for 2 * clk_period; 
   display_ready <= '0';
-    wait for 6 * clk_period; 
+  wait for 6 * clk_period; 
   display_ready <= '1'; -- Here we are at wait1 state
-    wait for 2 * clk_period; 
+  wait for 2 * clk_period; 
   display_ready <= '0';
-    wait for 6 * clk_period; 
+  wait for 6 * clk_period; 
   display_ready <= '1'; -- Land on wait key state
-    wait for 3 * clk_period;
+  wait for 3 * clk_period;
   display_ready <= '0'; 
   key_pressed <='1';
-  key_correct <= '0';
-    wait for 6 * clk_period; 
+  key_correct <= '1'; -- Here we go at good key state
+  wait for 8 * clk_period; -- We wait a bit at wait2 state
   display_ready <= '1';
-    wait for 1 * clk_period; 
+  wait for 1 * clk_period; 
   display_ready <= '0';
-    wait for 10 * clk_period;
+  key_pressed <='1';
+  key_correct <= '1'; -- Here we go at good key state
+  wait for 8 * clk_period; -- We go to wait1
+  display_ready <= '1';
+  wait for 1 * clk_period; 
+  display_ready <= '0';
+  wait for 10 * clk_period; -- The last state should be wait1
     -- Arrêter l'horloge pour terminer la simulation automatiquement
     enable_clk_src <= false;
     wait;

@@ -1,0 +1,11 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.sim/sim_1/synth/func/xsim/simon_affichage_del_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cnt'
+INFO: [VRFC 10-3107] analyzing entity 'cnt_0'
+INFO: [VRFC 10-3107] analyzing entity 'delay_cnt'
+INFO: [VRFC 10-3107] analyzing entity 'heartbeat'
+INFO: [VRFC 10-3107] analyzing entity 'lumi'
+INFO: [VRFC 10-3107] analyzing entity 'meta_harden'
+INFO: [VRFC 10-3107] analyzing entity 'msa_display'
+INFO: [VRFC 10-3107] analyzing entity 'msa_simon'
+INFO: [VRFC 10-3107] analyzing entity 'prbs7'
+INFO: [VRFC 10-3107] analyzing entity 'simon_affichage_del'

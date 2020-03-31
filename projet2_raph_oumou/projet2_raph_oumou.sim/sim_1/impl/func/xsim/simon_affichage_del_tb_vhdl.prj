@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"simon_affichage_del_tb_func_impl.vhd" \
+"../../../../../../Sources/simon_affichage_del_tb.vhd" \
+
+# Do not sort compile order
+nosort
