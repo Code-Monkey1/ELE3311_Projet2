@@ -32,6 +32,7 @@ generic (
 port (
   clk_i                 : in    std_logic;
   seq_i                 : in    std_logic_vector(WIDTH-1 downto 0);
+  rst_i                 : in    std_logic;
   lumi_seq_o            : out   std_logic_vector(WIDTH-1 downto 0)
 );
 end lumi;
@@ -39,125 +40,155 @@ end lumi;
 
 architecture behavioral of lumi is
 
-type T_etat is (init,
-                led0wait1,
-                led0wait2,
-                led0wait3,
-                led1wait1,
-                led1wait2,
-                led1wait3,
-                led2wait1,
-                led2wait2,
-                led2wait3,
-                led3wait1,
-                led3wait2,
-                led3wait3,
-                noLedWait1,
-                noLedWait2,
-                noLedWait3
-                );
+--type T_etat is (init,
+--                led0wait1,
+--                led0wait2,
+--                led0wait3,
+--                led1wait1,
+--                led1wait2,
+--                led1wait3,
+--                led2wait1,
+--                led2wait2,
+--                led2wait3,
+--                led3wait1,
+--                led3wait2,
+--                led3wait3,
+--                noLedWait1,
+--                noLedWait2,
+--                noLedWait3
+--                );
                 
-signal etat_present, etat_suivant : T_etat;
-signal lumi_seq_p, lumi_seq_f : std_logic_vector(WIDTH-1 downto 0) := "0000";
+--signal etat_present, etat_suivant : T_etat;
+--signal lumi_seq_p, lumi_seq_f : std_logic_vector(WIDTH-1 downto 0) := "0000";
 
 
-begin
+--begin
 
-lumi_seq_o <= lumi_seq_p;
+--lumi_seq_o <= lumi_seq_p;
   
-reg_process : process(clk_i)
-begin
-    if rising_edge(clk_i) then
-		etat_present <= etat_suivant;
-		lumi_seq_p <= lumi_seq_f;
-	end if;
-end process;
+--reg_process : process(clk_i)
+--begin
+--    if rising_edge(clk_i) then
+--		etat_present <= etat_suivant;
+--		lumi_seq_p <= lumi_seq_f;
+--	end if;
+--end process;
 
-lumi_msa_process : process(
-                             etat_present,
-                             seq_i)
-begin
-	case etat_present is
-		when init =>
-		    if seq_i = "0001" then
-		      etat_suivant <= led0wait1;
-		      lumi_seq_f <= "0001";
-		    elsif seq_i = "0010" then
-		      etat_suivant <= led1wait1;
-		      lumi_seq_f <= "0010";
-		    elsif seq_i = "0100" then
-		      etat_suivant <= led2wait1;
-		      lumi_seq_f <= "0100";
-		    elsif seq_i = "1000" then
-		      etat_suivant <= led3wait1;
-		      lumi_seq_f <= "1000";
-		    else
-		      etat_suivant <= noLedwait1;
-		      lumi_seq_f <= "0000";
-		    end if;
+--lumi_msa_process : process(
+--                             etat_present,
+--                             seq_i)
+--begin
+--	case etat_present is
+--		when init =>
+--		    if seq_i = "0001" then
+--		      etat_suivant <= led0wait1;
+--		      lumi_seq_f <= "0001";
+--		    elsif seq_i = "0010" then
+--		      etat_suivant <= led1wait1;
+--		      lumi_seq_f <= "0010";
+--		    elsif seq_i = "0100" then
+--		      etat_suivant <= led2wait1;
+--		      lumi_seq_f <= "0100";
+--		    elsif seq_i = "1000" then
+--		      etat_suivant <= led3wait1;
+--		      lumi_seq_f <= "1000";
+--		    else
+--		      etat_suivant <= noLedwait1;
+--		      lumi_seq_f <= "0000";
+--		    end if;
 
-		when led0wait1 =>
-		    etat_suivant <= led0wait2;
-		    lumi_seq_f <= "0001";
+--		when led0wait1 =>
+--		    etat_suivant <= led0wait2;
+--		    lumi_seq_f <= "0001";
 		    
-		when led0wait2 =>
-		    etat_suivant <= led0wait3;
-		    lumi_seq_f <= "0001";
+--		when led0wait2 =>
+--		    etat_suivant <= led0wait3;
+--		    lumi_seq_f <= "0001";
 		    
-		when led0wait3 =>
-		    etat_suivant <= init;
-		    lumi_seq_f <= "1111";  
+--		when led0wait3 =>
+--		    etat_suivant <= init;
+--		    lumi_seq_f <= "1111";  
 		    
-		when led1wait1 =>
-		    etat_suivant <= led1wait2;
-		    lumi_seq_f <= "0010";
+--		when led1wait1 =>
+--		    etat_suivant <= led1wait2;
+--		    lumi_seq_f <= "0010";
 		    
-		when led1wait2 =>
-		    etat_suivant <= led1wait3;
-		    lumi_seq_f <= "0010";
+--		when led1wait2 =>
+--		    etat_suivant <= led1wait3;
+--		    lumi_seq_f <= "0010";
 		    
-		when led1wait3 =>
-		    etat_suivant <= init;
-		    lumi_seq_f <= "1111";  
+--		when led1wait3 =>
+--		    etat_suivant <= init;
+--		    lumi_seq_f <= "1111";  
 		
-		when led2wait1 =>
-		    etat_suivant <= led2wait2;
-		    lumi_seq_f <= "0100";
+--		when led2wait1 =>
+--		    etat_suivant <= led2wait2;
+--		    lumi_seq_f <= "0100";
 		    
-		when led2wait2 =>
-		    etat_suivant <= led2wait3;
-		    lumi_seq_f <= "0100";
+--		when led2wait2 =>
+--		    etat_suivant <= led2wait3;
+--		    lumi_seq_f <= "0100";
 		    
-		when led2wait3 =>
-		    etat_suivant <= init;
-		    lumi_seq_f <= "1111"; 
+--		when led2wait3 =>
+--		    etat_suivant <= init;
+--		    lumi_seq_f <= "1111"; 
 		
-		when led3wait1 =>
-		    etat_suivant <= led3wait2;
-		    lumi_seq_f <= "1000";
+--		when led3wait1 =>
+--		    etat_suivant <= led3wait2;
+--		    lumi_seq_f <= "1000";
 		    
-		when led3wait2 =>
-		    etat_suivant <= led3wait3;
-		    lumi_seq_f <= "1000";
+--		when led3wait2 =>
+--		    etat_suivant <= led3wait3;
+--		    lumi_seq_f <= "1000";
 		    
-		when led3wait3 =>
-		    etat_suivant <= init;
-		    lumi_seq_f <= "1111";
+--		when led3wait3 =>
+--		    etat_suivant <= init;
+--		    lumi_seq_f <= "1111";
 		    
-		when noLedWait1 =>
-		    etat_suivant <= noLedWait2;
-		    lumi_seq_f <= "0000";
+--		when noLedWait1 =>
+--		    etat_suivant <= noLedWait2;
+--		    lumi_seq_f <= "0000";
 		    
-		when noLedWait2 =>
-		    etat_suivant <= noLedWait3;
-		    lumi_seq_f <= "0000";
+--		when noLedWait2 =>
+--		    etat_suivant <= noLedWait3;
+--		    lumi_seq_f <= "0000";
 
-		when others => --noLedWait3
-            etat_suivant <= init;
-            lumi_seq_f <= "1111";
+--		when others => --noLedWait3
+--            etat_suivant <= init;
+--            lumi_seq_f <= "1111";
 			 
-	end case;
+--	end case;
 
-end process;
+--end process;
   
-end behavioral;
+--end behavioral;
+
+
+signal Lumi_seq_p : std_logic_vector(WIDTH-1 downto 0);
+signal compteur : unsigned ((WIDTH*WIDTH)-1 downto 0):= to_unsigned(0,WIDTH*WIDTH);
+
+begin
+lumi_seq_o <= Lumi_seq_p;
+synchrone: process(rst_i,clk_i)
+begin
+        if (rst_i = '1') then
+            compteur <= (others => '0');
+            elsif (rising_edge(clk_i)) then
+                if(compteur < to_unsigned(15, WIDTH*WIDTH)) then
+                    if (compteur < "1011") then
+                        Lumi_seq_p <= seq_i;
+                    else 
+                        Lumi_seq_p <= "1111";
+                    end if;
+                    compteur <= compteur + 1;
+                 else
+                    Lumi_seq_p <= seq_i;
+                    compteur <= to_unsigned(0, WIDTH*WIDTH);
+                end if;
+          end if;   
+        end process synchrone;
+    end behavioral;
+        
+    
+    
+
