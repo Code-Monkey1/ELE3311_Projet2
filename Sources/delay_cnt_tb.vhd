@@ -38,6 +38,9 @@ end delay_cnt_tb;
 architecture Behavioral of delay_cnt_tb is
 
 component delay_cnt
+  generic (
+    SHORT_SIM             : boolean := TRUE
+  );
 port (
   rst_i                 : in    std_logic;
   clk_i                 : in    std_logic;
