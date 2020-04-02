@@ -166,7 +166,7 @@ begin
                 seq_length_inc_f     <= '0';
                 item_cnt_rst_f       <= '1';
                 item_cnt_inc_f       <= '0';
-                ms_player_f          <= '0';
+                ms_player_f          <= '1'; -- nouveau: montre au joueur qu'on l'attend
                 ms_gameover_f        <= '0';
                 ms_digit_valid_f     <= '0';
                 next_prbs_f          <= '0';
@@ -179,7 +179,7 @@ begin
                 seq_length_inc_f     <= '0';
                 item_cnt_rst_f       <= '1';
                 item_cnt_inc_f       <= '0';
-                ms_player_f          <= '0';
+                ms_player_f          <= '1'; -- nouveau: montre au joueur qu'on l'attend
                 ms_gameover_f        <= '0';
                 ms_digit_valid_f     <= '0';
                 next_prbs_f          <= '0';
@@ -283,7 +283,7 @@ begin
 			  etat_suivant <=next_2_instr;
 			  
 		When next_2_instr =>
-			  seq_length_1_f       <= '0';
+			seq_length_1_f       <= '0';
             seq_length_inc_f     <= '0';
             item_cnt_rst_f       <= '0';
             item_cnt_inc_f       <= '0';
@@ -292,7 +292,7 @@ begin
             ms_digit_valid_f     <= '0';
             next_prbs_f          <= '0';
             load_prbs_f          <= '0';
-              etat_suivant <= wait1;
+            etat_suivant <= wait1;
  
 		When prepare_to_play =>
 			etat_suivant <= wait2;
@@ -307,7 +307,6 @@ begin
             load_prbs_f          <= '0';
 		
 		When wait2 =>
-			next_prbs_f <= '0';
 			if display_ready_i = '1' then
 			    seq_length_1_f       <= '0';
                 seq_length_inc_f     <= '0';
@@ -505,18 +504,6 @@ begin
 			etat_suivant <= start_instr;
 		
 		end case;
-		
-		-- Assign port outputs to signal outputs
-		  seq_length_1_o       <= seq_length_1_p;
-          seq_length_inc_o     <= seq_length_inc_p;
-          item_cnt_rst_o       <= item_cnt_rst_p;
-          item_cnt_inc_o       <= item_cnt_inc_p;
-          ms_player_o          <= ms_player_p;
-          ms_gameover_o        <= ms_gameover_p;
-          ms_digit_valid_o     <= ms_digit_valid_p;
-          next_prbs_o          <= next_prbs_p;
-          load_prbs_o          <= load_prbs_p;
-		
 end process;
  
 end behavioral;

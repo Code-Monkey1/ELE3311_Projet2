@@ -1,7 +1,27 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 6566a69c6277490a9acb63108059c35f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot msa_simon_tb_behav xil_defaultlib.msa_simon_tb -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 6566a69c6277490a9acb63108059c35f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simon_affichage_del_evaluation_tb_behav xil_defaultlib.simon_affichage_del_evaluation_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
+Compiling architecture arch_meta_harden of entity xil_defaultlib.meta_harden [\meta_harden(width=5)\]
+Compiling architecture behavioral of entity xil_defaultlib.dbnc [dbnc_default]
+Compiling architecture behavioral of entity xil_defaultlib.prbs7 [prbs7_default]
+Compiling architecture behavioral of entity xil_defaultlib.msa_simon [msa_simon_default]
+Compiling architecture behavioral of entity xil_defaultlib.cnt [cnt_default]
+Compiling architecture behavioral of entity xil_defaultlib.msa_display [msa_display_default]
+Compiling architecture behavioral of entity xil_defaultlib.delay_cnt [\delay_cnt(count_val="1110010011...]
+Compiling architecture behavioral of entity xil_defaultlib.lumi [lumi_default]
+Compiling architecture behavioral of entity xil_defaultlib.heartbeat [\heartbeat(count_val="0010111110...]
+Compiling architecture behavioral of entity xil_defaultlib.simon_affichage_del [\simon_affichage_del(short_sim=t...]
+Compiling architecture bench of entity xil_defaultlib.simon_affichage_del_evaluation_t...
+Built simulation snapshot simon_affichage_del_evaluation_tb_behav

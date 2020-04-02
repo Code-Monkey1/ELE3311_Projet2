@@ -40,24 +40,31 @@ end delay_cnt;
 
 architecture behavioral of delay_cnt is
     signal is_counting: std_logic := '0';
-    signal cnt: integer := 0;
+    signal my_counter: integer := 0;
+    signal FINAL_COUNTER_VALUE : unsigned(24 downto 0) := COUNT_VAL;
+    
 begin 
+
   process (clk_i, rst_i, start_delay_i)
   begin 
     if (rst_i = '1')then
-        end_delay_o <='0';
+        end_delay_o <='0'; -- No output on reset
+        my_counter <= 0; -- Reset the counter
     else
+        if (SHORT_SIM = true) then
+            FINAL_COUNTER_VALUE <= COUNT_VAL_SHORT; -- Only useful for simulations
+        end if;
         if start_delay_i = '1' then
-            is_counting <= '1';
+            is_counting <= '1'; -- Raise flag
         end if;    
         if  rising_edge(clk_i) then
             if is_counting = '1' then
-                if (cnt = COUNT_VAL) then
-                    end_delay_o <='1';
-                    cnt <=0;
-                    is_counting <= '0'; 
+                if (my_counter = FINAL_COUNTER_VALUE) then
+                    end_delay_o <='1'; -- Done counting!
+                    my_counter <= 0; -- Reset the counter
+                    is_counting <= '0'; -- Reset the flag
                  else
-                     cnt <= cnt +1;
+                     my_counter <= my_counter +1; -- Increment counter
                      end_delay_o <='0';
                      is_counting <= '1';
                  end if;
@@ -73,7 +80,7 @@ end behavioral;
 
 
 
-
+-- DOES NOT WORK!
 -- version raph oumou 30 mars 2020
 --entity delay_cnt is
 --generic (
