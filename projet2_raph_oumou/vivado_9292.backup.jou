@@ -1,0 +1,182 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Mar 30 16:01:56 2020
+# Process ID: 9292
+# Current directory: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9888 C:\Users\RAPH\Documents\Polytechnique\Systemes_Logiques_Programmables\Labos\Projet2GitHub\ELE3311_Projet2\projet2_raph_oumou\projet2_raph_oumou.xpr
+# Log file: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/vivado.log
+# Journal file: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source simon_affichage_del_tb.tcl
+add_wave {{/simon_affichage_del_tb/uut}} 
+relaunch_sim
+add_wave {{/simon_affichage_del_tb/uut/msa_simon_inst}} 
+relaunch_sim
+save_wave_config {C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg
+set_property xsim.view C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg [get_filesets sim_1]
+close_sim
+add_files -norecurse C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/msa_display.vhd
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg
+source simon_affichage_del_tb.tcl
+add_wave {{/simon_affichage_del_tb/uut/msa_display_inst}} 
+relaunch_sim
+save_wave_config {C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav1.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav1.wcfg
+set_property xsim.view {C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav1.wcfg} [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav1.wcfg
+source simon_affichage_del_tb.tcl
+run all
+relaunch_sim
+run 4 s
+add_wave {{/simon_affichage_del_tb/uut/msa_simon_inst}} 
+relaunch_sim
+run 4 s
+save_wave_config {C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav2.wcfg}
+add_files -fileset sim_1 -norecurse C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav2.wcfg
+set_property xsim.view {C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav1.wcfg C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav2.wcfg} [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav1.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav2.wcfg
+source simon_affichage_del_tb.tcl
+run 4 s
+close_sim
+launch_simulation
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav1.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav2.wcfg
+source simon_affichage_del_tb.tcl
+relaunch_sim
+run 4 s
+close_sim
+launch_simulation
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav1.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav2.wcfg
+source simon_affichage_del_tb.tcl
+run 4 s
+close_sim
+launch_simulation
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav1.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav2.wcfg
+source simon_affichage_del_tb.tcl
+run 4 s
+current_wave_config {simon_affichage_del_tb_behav2.wcfg}
+add_wave {{/simon_affichage_del_tb/uut/msa_display_inst}} 
+relaunch_sim
+run 4 s
+add_bp {C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/delay_cnt.vhd} 49
+remove_bps -file {C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/delay_cnt.vhd} -line 49
+close_sim
+launch_simulation
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav1.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav2.wcfg
+source simon_affichage_del_tb.tcl
+run 4 s
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav1.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav2.wcfg
+source simon_affichage_del_tb.tcl
+run 4 s
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/delay_cnt_tb.vhd
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top delay_cnt_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+close_sim
+launch_simulation
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav1.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav2.wcfg
+source delay_cnt_tb.tcl
+run 4 s
+current_wave_config {simon_affichage_del_tb_behav2.wcfg}
+add_wave {{/delay_cnt_tb/uut}} 
+relaunch_sim
+run 4 s
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top simon_affichage_del_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav1.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav2.wcfg
+source simon_affichage_del_tb.tcl
+run 4 s
+current_wave_config {simon_affichage_del_tb_behav2.wcfg}
+add_wave {{/simon_affichage_del_tb/uut/msa_display_inst}} 
+relaunch_sim
+run 4 s
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation -mode post-synthesis -type functional
+launch_simulation -mode post-synthesis -type functional
+launch_simulation -mode post-synthesis -type functional
+launch_simulation -mode post-synthesis -type functional
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav1.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav2.wcfg
+source simon_affichage_del_tb.tcl
+current_wave_config {simon_affichage_del_tb_behav.wcfg}
+add_wave {{/simon_affichage_del_tb/uut/msa_simon_inst}} 
+current_wave_config {simon_affichage_del_tb_behav1.wcfg}
+add_wave {{/simon_affichage_del_tb/uut/msa_display_inst}} 
+relaunch_sim
+run 4 s
+close_sim
+launch_simulation
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav1.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav2.wcfg
+source simon_affichage_del_tb.tcl
+run 4 s
+close_sim
+close_design
+launch_simulation
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav1.wcfg
+open_wave_config C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/simon_affichage_del_tb_behav2.wcfg
+source simon_affichage_del_tb.tcl
+run 4 s
+run 4 s
+run 4 s
+step
+step
+relaunch_sim
+step
+close_sim

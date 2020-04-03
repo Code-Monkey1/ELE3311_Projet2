@@ -169,6 +169,11 @@ end component;
 
 
   component delay_cnt
+  generic (
+      SHORT_SIM             : boolean               := false;
+      COUNT_VAL             : unsigned(24 downto 0) := to_unsigned(30000000, 25);
+      COUNT_VAL_SHORT       : unsigned(24 downto 0) := to_unsigned(2, 25)
+  );
   port (
   rst_i                 : in    std_logic;
   clk_i                 : in    std_logic;
@@ -383,18 +388,18 @@ begin
 
  ------------------------------------------------------------------------------
  
--- Sample_8khz_inst : delay_cnt
--- generic map (
---  SHORT_SIM             => SHORT_SIM, 
---  COUNT_VAL             => to_unsigned(1250000, 25),
---  COUNT_VAL_SHORT       => to_unsigned(2, 25)
---)
---port map (
---rst_i                  =>rst,
---clk_i                  =>clk,
---start_delay_i          =>start_delay,
---end_delay_o            =>end_delay
---);
+ Sample_8khz_inst : delay_cnt
+ generic map (
+  SHORT_SIM             => SHORT_SIM, 
+  COUNT_VAL             => to_unsigned(1250000, 25),
+  COUNT_VAL_SHORT       => to_unsigned(2, 25)
+)
+port map (
+rst_i                  =>rst,
+clk_i                  =>clk,
+start_delay_i          =>start_delay,
+end_delay_o            =>end_delay
+);
 
 
 
