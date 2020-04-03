@@ -169,6 +169,9 @@ end component;
 
 
   component delay_cnt
+    generic (
+    SHORT_SIM             : boolean := SHORT_SIM
+  );
   port (
   rst_i                 : in    std_logic;
   clk_i                 : in    std_logic;
