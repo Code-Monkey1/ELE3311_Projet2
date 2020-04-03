@@ -22,25 +22,25 @@ create_project -in_memory -part xc7a200tsbg484-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.cache/wt [current_project]
-set_property parent.project_path C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.xpr [current_project]
+set_property webtalk.parent_dir {C:/Users/HP EliteBook Pro/Documents/GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/HP EliteBook Pro/Documents/GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo c:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.cache/ip [current_project]
+set_property ip_output_repo {c:/Users/HP EliteBook Pro/Documents/GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.srcs/sources_1/imports/Sources/cnt.vhd
-  C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/dbnc.vhd
-  C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/meta_harden.vhd
-  C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/msa_display.vhd
-  C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/msa_simon.vhd
-  C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/prbs7.vhd
+  {C:/Users/HP EliteBook Pro/Documents/GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.srcs/sources_1/imports/Sources/cnt.vhd}
+  {C:/Users/HP EliteBook Pro/Documents/GitHub/ELE3311_Projet2/Sources/dbnc.vhd}
+  {C:/Users/HP EliteBook Pro/Documents/GitHub/ELE3311_Projet2/Sources/meta_harden.vhd}
+  {C:/Users/HP EliteBook Pro/Documents/GitHub/ELE3311_Projet2/Sources/msa_display.vhd}
+  {C:/Users/HP EliteBook Pro/Documents/GitHub/ELE3311_Projet2/Sources/msa_simon.vhd}
+  {C:/Users/HP EliteBook Pro/Documents/GitHub/ELE3311_Projet2/Sources/prbs7.vhd}
 }
 read_vhdl -vhdl2008 -library xil_defaultlib {
-  C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/delay_cnt.vhd
-  C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/heartbeat.vhd
-  C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/lumi.vhd
-  C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.srcs/sources_1/imports/rtl/simon_affichage_del.vhd
+  {C:/Users/HP EliteBook Pro/Documents/GitHub/ELE3311_Projet2/Sources/delay_cnt.vhd}
+  {C:/Users/HP EliteBook Pro/Documents/GitHub/ELE3311_Projet2/Sources/heartbeat.vhd}
+  {C:/Users/HP EliteBook Pro/Documents/GitHub/ELE3311_Projet2/Sources/lumi.vhd}
+  {C:/Users/HP EliteBook Pro/Documents/GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.srcs/sources_1/imports/rtl/simon_affichage_del.vhd}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -50,8 +50,8 @@ read_vhdl -vhdl2008 -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/timing.xdc
-set_property used_in_implementation false [get_files C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/timing.xdc]
+read_xdc {{C:/Users/HP EliteBook Pro/Documents/GitHub/ELE3311_Projet2/Sources/timing.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/HP EliteBook Pro/Documents/GitHub/ELE3311_Projet2/Sources/timing.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

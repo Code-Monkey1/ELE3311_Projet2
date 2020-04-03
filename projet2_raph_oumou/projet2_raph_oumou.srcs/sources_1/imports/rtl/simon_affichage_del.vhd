@@ -397,8 +397,8 @@ begin
 port map (
 rst_i                  =>rst,
 clk_i                  =>clk,
-start_delay_i          =>start_delay,
-end_delay_o            =>end_delay
+start_delay_i          =>Sample_8khz,
+end_delay_o            =>Sample_8khz
 );
 
 
