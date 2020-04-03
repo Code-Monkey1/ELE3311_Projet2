@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Wed Apr  1 20:39:49 2020
-# Process ID: 28564
+# Start of session at: Thu Apr  2 21:23:14 2020
+# Process ID: 2912
 # Current directory: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.runs/synth_1
 # Command line: vivado.exe -log simon_affichage_del.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source simon_affichage_del.tcl
 # Log file: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/projet2_raph_oumou/projet2_raph_oumou.runs/synth_1/simon_affichage_del.vds

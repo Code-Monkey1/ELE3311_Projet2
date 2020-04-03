@@ -1,28 +1,6 @@
 Vivado Simulator 2019.2
 Time resolution is 1 ps
 Note: Debuter une premiere partie. seed = 48
-Time: 130 ns  Iteration: 0  Process: /simon_affichage_del_evaluation_tb/stimulus  File: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/simon_affichage_del_evaluation_tb.vhd
-Error: Error Lumi output
-Time: 230 ns  Iteration: 0  Process: /simon_affichage_del_evaluation_tb/stimulus  File: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/simon_affichage_del_evaluation_tb.vhd
-Error: Error PRBS7 output
-Time: 450 ns  Iteration: 0  Process: /simon_affichage_del_evaluation_tb/stimulus  File: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/simon_affichage_del_evaluation_tb.vhd
-Error: Error Md_player_o value
-Time: 600 ns  Iteration: 0  Process: /simon_affichage_del_evaluation_tb/stimulus  File: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/simon_affichage_del_evaluation_tb.vhd
-Error: Error player mode output seq 1
-Time: 2 us  Iteration: 0  Process: /simon_affichage_del_evaluation_tb/stimulus  File: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/simon_affichage_del_evaluation_tb.vhd
-Error: Error player mode output seq 2
-Time: 5700 ns  Iteration: 0  Process: /simon_affichage_del_evaluation_tb/stimulus  File: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/simon_affichage_del_evaluation_tb.vhd
-Error: Error Encoder seq 2
-Time: 7900 ns  Iteration: 0  Process: /simon_affichage_del_evaluation_tb/stimulus  File: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/simon_affichage_del_evaluation_tb.vhd
-Error: Error player mode output seq 3
-Time: 11300 ns  Iteration: 0  Process: /simon_affichage_del_evaluation_tb/stimulus  File: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/simon_affichage_del_evaluation_tb.vhd
-Error: Error Encoder seq 3
-Time: 13500 ns  Iteration: 0  Process: /simon_affichage_del_evaluation_tb/stimulus  File: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/simon_affichage_del_evaluation_tb.vhd
-Error: Error Encoder seq 3
-Time: 15450 ns  Iteration: 0  Process: /simon_affichage_del_evaluation_tb/stimulus  File: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/simon_affichage_del_evaluation_tb.vhd
-Error: Error player mode output
-Time: 18800 ns  Iteration: 0  Process: /simon_affichage_del_evaluation_tb/stimulus  File: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/simon_affichage_del_evaluation_tb.vhd
-Error: Error Md_gameover output
-Time: 25200 ns  Iteration: 0  Process: /simon_affichage_del_evaluation_tb/stimulus  File: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/simon_affichage_del_evaluation_tb.vhd
-Note: Debuter une nouvelle partie. seed = 48
-Time: 25200 ns  Iteration: 0  Process: /simon_affichage_del_evaluation_tb/stimulus  File: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/simon_affichage_del_evaluation_tb.vhd
+Time: 130 ns  Iteration: 0  Process: /simon_affichage_del_evaluation_nouveau_tb/stimulus  File: C:/Users/RAPH/Documents/Polytechnique/Systemes_Logiques_Programmables/Labos/Projet2GitHub/ELE3311_Projet2/Sources/simon_affichage_del_evaluation_nouveau_tb.vhd
+FATAL_ERROR: Iteration limit 10000 is reached. Possible zero delay oscillation detected where simulation time can not advance. Please check your source code. Note that the iteration limit can be changed using switch -maxdeltaid.
+Time: 2475 ns  Iteration: 10000

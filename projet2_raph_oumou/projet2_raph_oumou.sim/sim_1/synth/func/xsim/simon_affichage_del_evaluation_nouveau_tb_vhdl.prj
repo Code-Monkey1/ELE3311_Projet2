@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"simon_affichage_del_evaluation_nouveau_tb_func_synth.vhd" \
+
+vhdl2008 xil_defaultlib  \
+"../../../../../../Sources/simon_affichage_del_evaluation_nouveau_tb.vhd" \
+
+# Do not sort compile order
+nosort

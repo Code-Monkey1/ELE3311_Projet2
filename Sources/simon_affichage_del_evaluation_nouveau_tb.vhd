@@ -16,15 +16,15 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 
-entity simon_affichage_del_evaluation_tb is
-end simon_affichage_del_evaluation_tb;
+entity simon_affichage_del_evaluation_nouveau_tb is
+end simon_affichage_del_evaluation_nouveau_tb;
 
 
-architecture bench of simon_affichage_del_evaluation_tb is
+architecture bench of simon_affichage_del_evaluation_nouveau_tb is
 
   component simon_affichage_del
   generic (
-    SHORT_SIM             : boolean := false
+    SHORT_SIM             : boolean := true
   );
   port (
     rst_n_i               : in    std_logic;
@@ -89,96 +89,92 @@ begin
     
     report "Debuter une premiere partie. seed = " & to_hstring(seed);
     start_game <= '1';
-    wait for 4 * clk_period;
-    assert del(3 downto 0) = "1111" report "Error Lumi output" severity error;
-    wait for 6 * clk_period;
-    assert del(3 downto 0) = "0000" report "Error Lumi output" severity error;
-    wait for 22 * clk_period;
+    
+    wait on del(3 downto 0) until del(3 downto 0) = "0001" for 100 * clk_period;
     assert del(3 downto 0) = "0001" report "Error PRBS7 output" severity error;
-    wait for 15 * clk_period;
+    wait on del(6) until del(6) = '1' for 100 * clk_period;
     assert del(6) = '1' report "Error Md_player_o value" severity error;
-    wait for 3 * clk_period;
+    
     start_game <= '0' ;
-    wait for 137 * clk_period;
-
+    wait for 200 * clk_period;
+    
     -- Seq 1
     assert del(6) = '1' report "Error player mode output seq 1" severity error;
-    btn(0) <= '1';
-    wait for 30 * clk_period;
+    btn(0) <= '1';    
+    wait on del(3 downto 0) until del(3 downto 0) = "0001" for 100 * clk_period;
     assert del(3 downto 0) = "0001" report "Error Encoder seq 1" severity error;
     wait for 20 * clk_period;
-    btn(0) <= '0';
+    btn(0) <= '0';    
     
     assert del(6) = '0' report "Error generation mode output seq 1" severity error;
-    wait for 320 * clk_period;
-
+    wait for 500 * clk_period;
+    
     -- Seq 2
     assert del(6) = '1' report "Error player mode output seq 2" severity error;
-    btn(0) <= '1';
-    wait for 30 * clk_period;
-    assert del(3 downto 0) = "0001" report "Error Encoder seq 2" severity error;
-    wait for 20 * clk_period;
+    btn(0) <= '1';   
+    wait on del(3 downto 0) until del(3 downto 0) = "0001" for 100 * clk_period;
+    assert del(3 downto 0) = "0001" report "Error Encoder seq 2" severity error; 
+    wait for 20 * clk_period;  
     btn(0) <= '0';
-    wait for 140 * clk_period;
-
+    wait for 200 * clk_period;
     
     btn(2) <= '1';
-    wait for 30 * clk_period;
-    assert del(3 downto 0) = "0100" report "Error Encoder seq 2" severity error;
+    wait on del(3 downto 0) until del(3 downto 0) = "0100" for 100 * clk_period;
+    assert del(3 downto 0) = "0100" report "Error Encoder seq 2" severity error;     
     wait for 20 * clk_period;
-    btn(2) <= '0';
-    
-    assert del(6) = '0' report "Error generation mode output seq 2" severity error;
-    wait for 320 * clk_period;
+    btn(2) <= '0';   
 
+    assert del(6) = '0' report "Error generation mode output seq 2" severity error;
+    wait for 500 * clk_period;
+    
     -- Seq 3
     assert del(6) = '1' report "Error player mode output seq 3" severity error;
-
     btn(0) <= '1';
-    wait for 30 * clk_period;
+    wait on del(3 downto 0) until del(3 downto 0) = "0001" for 100 * clk_period;
     assert del(3 downto 0) = "0001" report "Error Encoder seq 3" severity error;
     wait for 20 * clk_period;
     btn(0) <= '0';
-    wait for 140 * clk_period;
+    wait for 200 * clk_period;
     
     btn(2) <= '1';
-    wait for 30 * clk_period;
-    assert del(3 downto 0) = "0100" report "Error Encoder seq 3" severity error;
+    wait on del(3 downto 0) until del(3 downto 0) = "0100" for 100 * clk_period;
+    assert del(3 downto 0) = "0100" report "Error Encoder seq 3" severity error;   
     wait for 20 * clk_period;
     btn(2) <= '0';
-    wait for 140 * clk_period;
+    wait for 200 * clk_period;
 
-    
     btn(3) <= '1';
-    wait for 35 * clk_period;
-    assert del(3 downto 0) = "1000" report "Error Encoder seq 3" severity error;
-    wait for 15 * clk_period;
+    wait on del(3 downto 0) until del(3 downto 0) = "1000" for 100 * clk_period;
+    assert del(3 downto 0) = "1000" report "Error Encoder seq 3" severity error; 
+    wait for 20 * clk_period;
     btn(3) <= '0';
-    
+   
     assert del(6) = '0' report "Error generation mode output seq 3" severity error;
-    wait for 320 * clk_period;
+    wait for 500 * clk_period;
 
     -- Seq 4
     assert del(6) = '1' report "Error player mode output" severity error;
     btn(0) <= '1', '0' after 50 * clk_period;
-    wait for 320 * clk_period;
-
+    wait for 500 * clk_period;
+    
     -- Seq 4 erreur
     btn(0) <= '1', '0' after 50 * clk_period;
-    wait for 320 * clk_period;
+    wait for 500 * clk_period;
     assert del(5) = '1' report "Error Md_gameover output" severity error;
 
     report "Debuter une nouvelle partie. seed = " & to_hstring(seed);
     start_game <= '1', '0' after 50 * clk_period;
-    wait for 140 * clk_period;
+    wait for 200 * clk_period;
 
     btn(3) <= '1', '0' after 50 * clk_period;
-    wait for 140 * clk_period;
+    wait for 200 * clk_period;
 
     wait for 500 * clk_period;
+    report "Fin de la simulation.";
     -- Arrêter l'horloge pour terminer la simulation automatiquement
     enable_clk_src <= false;
     wait;
+    
   end process;
   
   

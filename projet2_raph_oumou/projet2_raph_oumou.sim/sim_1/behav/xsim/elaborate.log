@@ -1,6 +1,6 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 6566a69c6277490a9acb63108059c35f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simon_affichage_del_evaluation_tb_behav xil_defaultlib.simon_affichage_del_evaluation_tb -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 6566a69c6277490a9acb63108059c35f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot simon_affichage_del_evaluation_nouveau_tb_behav xil_defaultlib.simon_affichage_del_evaluation_nouveau_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -19,9 +19,9 @@ Compiling architecture behavioral of entity xil_defaultlib.prbs7 [prbs7_default]
 Compiling architecture behavioral of entity xil_defaultlib.msa_simon [msa_simon_default]
 Compiling architecture behavioral of entity xil_defaultlib.cnt [cnt_default]
 Compiling architecture behavioral of entity xil_defaultlib.msa_display [msa_display_default]
-Compiling architecture behavioral of entity xil_defaultlib.delay_cnt [\delay_cnt(count_val="1110010011...]
+Compiling architecture behavioral of entity xil_defaultlib.delay_cnt [\delay_cnt(short_sim=true,count_...]
 Compiling architecture behavioral of entity xil_defaultlib.lumi [lumi_default]
 Compiling architecture behavioral of entity xil_defaultlib.heartbeat [\heartbeat(count_val="0010111110...]
 Compiling architecture behavioral of entity xil_defaultlib.simon_affichage_del [\simon_affichage_del(short_sim=t...]
-Compiling architecture bench of entity xil_defaultlib.simon_affichage_del_evaluation_t...
-Built simulation snapshot simon_affichage_del_evaluation_tb_behav
+Compiling architecture bench of entity xil_defaultlib.simon_affichage_del_evaluation_n...
+Built simulation snapshot simon_affichage_del_evaluation_nouveau_tb_behav

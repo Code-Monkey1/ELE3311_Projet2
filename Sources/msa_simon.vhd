@@ -112,7 +112,7 @@ load_prbs_o          <= load_prbs_p;
 reg_process : process(clk_i, rst_i)
 begin
     if rst_i = '1' then
-        etat_present <= init;
+          etat_present <= init;
           seq_length_1_p       <= '0';
           seq_length_inc_p     <= '0';
           item_cnt_rst_p       <= '0';
@@ -123,8 +123,8 @@ begin
           next_prbs_p          <= '0';
           load_prbs_p          <= '0';
 	elsif rising_edge(clk_i) then
-		etat_present <= etat_suivant;
-		-- for every output, affect the futur to the present
+		  etat_present <= etat_suivant;
+		  -- for every output, affect the futur to the present
           seq_length_1_p       <= seq_length_1_f;
           seq_length_inc_p     <= seq_length_inc_f;
           item_cnt_rst_p       <= item_cnt_rst_f;
@@ -160,27 +160,42 @@ msa_game_process : process(
                             etat_present)
 begin
     case etat_present is
-        when init =>
+        when init => -- Init vient du reset ou du gameover
                 etat_suivant <= wait_for_start;
                 seq_length_1_f       <= '1';
                 seq_length_inc_f     <= '0';
                 item_cnt_rst_f       <= '1';
                 item_cnt_inc_f       <= '0';
-                ms_player_f          <= '1'; -- nouveau: montre au joueur qu'on l'attend
-                ms_gameover_f        <= '0';
+                ms_player_f          <= '1'; -- montre au joueur qu'on l'attend
                 ms_digit_valid_f     <= '0';
                 next_prbs_f          <= '0';
                 load_prbs_f          <= '0';
                 
-        when wait_for_start =>
+                -- On ne remet pas le gameover à zéro, car gameover doit être afficher jusqu'à ce que le joueur recommence une partie à moins que la MSA vient de commencer
+                if (ms_gameover_p = '1') then
+                    ms_gameover_f <= '1';
+                else
+                    ms_gameover_f <= '0';
+                end if;
+                
+                
+        when wait_for_start => -- attend l'entrée du joueur
             if start_game_i = '0' then
                 etat_suivant <= wait_for_start;
                 seq_length_1_f       <= '1';
                 seq_length_inc_f     <= '0';
                 item_cnt_rst_f       <= '1';
                 item_cnt_inc_f       <= '0';
-                ms_player_f          <= '1'; -- nouveau: montre au joueur qu'on l'attend
-                ms_gameover_f        <= '0';
+                ms_player_f          <= '1'; -- montre au joueur qu'on l'attend
+                
+                -- On ne remet pas le gameover à zéro, car gameover doit être afficher jusqu'à ce que le joueur recommence une partie à moins que la MSA vient de commencer
+                if (ms_gameover_p = '1') then
+                    ms_gameover_f <= '1';
+                else
+                    ms_gameover_f <= '0';
+                end if;
+                
+                
                 ms_digit_valid_f     <= '0';
                 next_prbs_f          <= '0';
                 load_prbs_f          <= '0';
@@ -191,13 +206,13 @@ begin
                 item_cnt_rst_f       <= '1';
                 item_cnt_inc_f       <= '0';
                 ms_player_f          <= '0';
-                ms_gameover_f        <= '0';
+                ms_gameover_f        <= '0'; -- On reset gameover si on commence une nouvelle partie
                 ms_digit_valid_f     <= '0';
                 next_prbs_f          <= '0';
                 load_prbs_f          <= '1';
               end if;
               
-        when  start_instr =>
+        when  start_instr => -- Commence à montrer la(les) LED(s) que le joueur doit mémoriser
              seq_length_1_f       <= '0';
                 seq_length_inc_f     <= '0';
                 item_cnt_rst_f       <= '0';
@@ -209,7 +224,7 @@ begin
                 load_prbs_f          <= '0';
              etat_suivant <= wait1;
              
-        when wait1 =>
+        when wait1 => -- Attend display_ready
            if  display_ready_i = '1' then
                etat_suivant <= increment_item;
                seq_length_1_f       <= '0';
@@ -234,7 +249,7 @@ begin
                 load_prbs_f          <= '0';
             end if;
             
-        when increment_item =>
+        when increment_item => -- Incrémente le compteur d'item pour parcourir tout les items de la séquence
                 seq_length_1_f       <= '0';
                 seq_length_inc_f     <= '0';
                 item_cnt_rst_f       <= '0';
@@ -245,7 +260,7 @@ begin
                 next_prbs_f          <= '0';
                 load_prbs_f          <= '0';
                 etat_suivant <= compare;
-        when compare  =>
+        when compare  => -- Check pour voir si on a fini de montrer les instructions
            if item_cnt_i = seq_length_i then
               etat_suivant <=  prepare_to_play;
               seq_length_1_f       <= '0';
@@ -270,7 +285,7 @@ begin
                 load_prbs_f          <= '0';
 			end if;
 		
-		When next_1_instr =>
+		When next_1_instr => -- 1er shift du prbs7
               seq_length_1_f       <= '0';
             seq_length_inc_f     <= '0';
             item_cnt_rst_f       <= '0';
@@ -282,7 +297,7 @@ begin
             load_prbs_f          <= '0';
 			  etat_suivant <=next_2_instr;
 			  
-		When next_2_instr =>
+		When next_2_instr =>  -- 2ieme shift du prbs7
 			seq_length_1_f       <= '0';
             seq_length_inc_f     <= '0';
             item_cnt_rst_f       <= '0';
@@ -294,7 +309,7 @@ begin
             load_prbs_f          <= '0';
             etat_suivant <= wait1;
  
-		When prepare_to_play =>
+		When prepare_to_play => -- Reset le compteur d'item avant de jouer et reload le prbs7
 			etat_suivant <= wait2;
 			seq_length_1_f       <= '0';
             seq_length_inc_f     <= '0';
@@ -306,7 +321,7 @@ begin
             next_prbs_f          <= '0';
             load_prbs_f          <= '0';
 		
-		When wait2 =>
+		When wait2 => -- Attend que l'affichage soit prêt
 			if display_ready_i = '1' then
 			    seq_length_1_f       <= '0';
                 seq_length_inc_f     <= '0';
@@ -331,20 +346,9 @@ begin
                 load_prbs_f          <= '0';
 			end if;
 		
-		when wait_key =>
-			ms_player_f <= '1';
-			if (key_pressed_i = '0') and (key_correct_i = '0') then
-				etat_suivant <= wait_key;
-				seq_length_1_f       <= '0';
-                seq_length_inc_f     <= '0';
-                item_cnt_rst_f       <= '0';
-                item_cnt_inc_f       <= '0';
-                ms_player_f          <= '1';
-                ms_gameover_f        <= '0';
-                ms_digit_valid_f     <= '0';
-                next_prbs_f          <= '0';
-                load_prbs_f          <= '0';
-			elsif (key_pressed_i = '1') and (key_correct_i = '0') then
+		when wait_key => -- Montre au joueur qu'on est prêt à jouer
+
+			if (key_pressed_i = '1') and (key_correct_i = '0') then
 				etat_suivant <= bad_key;
 				seq_length_1_f       <= '0';
                 seq_length_inc_f     <= '0';
@@ -355,8 +359,9 @@ begin
                 ms_digit_valid_f     <= '0';
                 next_prbs_f          <= '0';
                 load_prbs_f          <= '0';
-			else
-				etat_suivant <= good_key;
+            -- ONLY accept the key_correct if key_pressed is also true (more strict & robust)
+            elsif (key_pressed_i = '1') and (key_correct_i = '1') then
+                  etat_suivant <= good_key;
                   seq_length_1_f       <= '0';
                   seq_length_inc_f     <= '0';
                   item_cnt_rst_f       <= '0';
@@ -366,8 +371,20 @@ begin
                   ms_digit_valid_f     <= '0';
                   next_prbs_f          <= '0';
                   load_prbs_f          <= '0';
+			else -- If key_pressed is false, keep waiting
+                etat_suivant <= wait_key;
+				seq_length_1_f       <= '0';
+                seq_length_inc_f     <= '0';
+                item_cnt_rst_f       <= '0';
+                item_cnt_inc_f       <= '0';
+                ms_player_f          <= '1'; -- Keep showing that we are waiting for input
+                ms_gameover_f        <= '0';
+                ms_digit_valid_f     <= '0';
+                next_prbs_f          <= '0';
+                load_prbs_f          <= '0';
 			end if;
-        when bad_key =>
+
+        when bad_key => -- FAIL: on se dirige vers le gameover (GG)
 			ms_player_f <= '0';
 			if display_ready_i = '1' then
 			    seq_length_1_f       <= '0';
@@ -393,19 +410,19 @@ begin
 				etat_suivant <= bad_key;
 			end if;
 			
-		when show_gameover =>
+		when show_gameover => -- Montre le gameover au display
 			    seq_length_1_f       <= '0';
                 seq_length_inc_f     <= '0';
                 item_cnt_rst_f       <= '0';
                 item_cnt_inc_f       <= '0';
                 ms_player_f          <= '0';
-                ms_gameover_f        <= '0';
                 ms_digit_valid_f     <= '0';
                 next_prbs_f          <= '0';
                 load_prbs_f          <= '0';
+                ms_gameover_f        <= '1'; -- Continue de montrer le gameover au prochain état
                 etat_suivant <= init;
 			
-		when good_key =>
+		when good_key => -- Attend que le display soit prêt avant de passer à la prochaine manche
 			if display_ready_i = '1' then
 				etat_suivant <= next_item;
 				seq_length_1_f       <= '0';
@@ -430,7 +447,7 @@ begin
                   load_prbs_f          <= '0';
 			end if;
 			
-		when next_item =>
+		when next_item => -- Incremente le compteur d'item pour savoir si on a fini la séquence
 			seq_length_1_f       <= '0';
                   seq_length_inc_f     <= '0';
                   item_cnt_rst_f       <= '0';
@@ -491,7 +508,7 @@ begin
               load_prbs_f          <= '0';
 			etat_suivant <= wait2;
 			
-		when start_new_round =>
+		when others => --start_new_round
 			seq_length_1_f       <= '0';
                 seq_length_inc_f     <= '0';
                 item_cnt_rst_f       <= '1';
